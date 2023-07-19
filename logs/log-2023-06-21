@@ -1,0 +1,41 @@
+2023-06-21 20:05:21,331 base_page.py _open INFO 正在打开url: http://bbs.51testing.com/member.php?mod=logging&action=login
+2023-06-21 20:05:21,331 base_page.py _open INFO 正在打开url: http://bbs.51testing.com/member.php?mod=logging&action=login
+2023-06-21 20:05:26,504 base_page.py _input INFO 正在向('name', 'username')中输入"知鱼"
+2023-06-21 20:05:26,504 base_page.py _input INFO 正在向('name', 'username')中输入"知鱼"
+2023-06-21 20:05:26,504 base_page.py _input INFO 正在向('name', 'username')中输入"知鱼"
+2023-06-21 20:05:26,504 base_page.py _input INFO 正在向('name', 'username')中输入"知鱼"
+2023-06-21 20:05:26,567 base_page.py _input INFO 正在向('name', 'password')中输入"cxy123!@#"
+2023-06-21 20:05:26,567 base_page.py _input INFO 正在向('name', 'password')中输入"cxy123!@#"
+2023-06-21 20:05:26,567 base_page.py _input INFO 正在向('name', 'password')中输入"cxy123!@#"
+2023-06-21 20:05:26,619 base_page.py _click INFO 点击元素('name', 'loginsubmit')
+2023-06-21 20:05:26,619 base_page.py _click INFO 点击元素('name', 'loginsubmit')
+2023-06-21 20:05:26,619 base_page.py _click INFO 点击元素('name', 'loginsubmit')
+2023-06-21 20:05:26,655 base_page.py _sleep INFO sleep 3 s
+2023-06-21 20:05:26,655 base_page.py _sleep INFO sleep 3 s
+2023-06-21 20:05:26,655 base_page.py _sleep INFO sleep 3 s
+2023-06-21 20:05:38,147 base_page.py _open INFO 正在打开url: http://bbs.51testing.com/member.php?mod=logging&action=login
+2023-06-21 20:05:38,147 base_page.py _open INFO 正在打开url: http://bbs.51testing.com/member.php?mod=logging&action=login
+2023-06-21 20:05:38,147 base_page.py _open INFO 正在打开url: http://bbs.51testing.com/member.php?mod=logging&action=login
+2023-06-21 20:05:43,268 base_page.py _input INFO 正在向('name', 'username')中输入"知鱼"
+2023-06-21 20:05:43,268 base_page.py _input INFO 正在向('name', 'username')中输入"知鱼"
+2023-06-21 20:05:43,268 base_page.py _input INFO 正在向('name', 'username')中输入"知鱼"
+2023-06-21 20:05:43,349 base_page.py _input INFO 正在向('name', 'password')中输入"cxy123!@#"
+2023-06-21 20:05:43,349 base_page.py _input INFO 正在向('name', 'password')中输入"cxy123!@#"
+2023-06-21 20:05:43,349 base_page.py _input INFO 正在向('name', 'password')中输入"cxy123!@#"
+2023-06-21 20:05:43,411 base_page.py _click INFO 点击元素('name', 'loginsubmit')
+2023-06-21 20:05:43,411 base_page.py _click INFO 点击元素('name', 'loginsubmit')
+2023-06-21 20:05:43,411 base_page.py _click INFO 点击元素('name', 'loginsubmit')
+2023-06-21 20:05:43,442 base_page.py _sleep INFO sleep 3 s
+2023-06-21 20:05:43,442 base_page.py _sleep INFO sleep 3 s
+2023-06-21 20:05:43,442 base_page.py _sleep INFO sleep 3 s
+2023-06-21 20:13:40,799 base_page.py _open INFO 正在打开url: http://bbs.51testing.com/member.php?mod=logging&action=login
+2023-06-21 20:13:47,453 base_page.py _input INFO 正在向('name', 'username')中输入"知鱼"
+2023-06-21 20:13:47,453 base_page.py _input INFO 正在向('name', 'username')中输入"知鱼"
+2023-06-21 20:13:47,527 base_page.py _input INFO 正在向('name', 'password')中输入"cxy123!@#"
+2023-06-21 20:13:47,592 base_page.py _click INFO 点击元素('name', 'loginsubmit')
+2023-06-21 20:13:47,629 base_page.py _sleep INFO sleep 3 s
+2023-06-21 20:13:59,380 base_page.py _open INFO 正在打开url: http://bbs.51testing.com/member.php?mod=logging&action=login
+2023-06-21 20:14:04,588 base_page.py _input INFO 正在向('name', 'username')中输入"知鱼"
+2023-06-21 20:14:04,662 base_page.py _input INFO 正在向('name', 'password')中输入"cxy123!@#"
+2023-06-21 20:14:04,717 base_page.py _click INFO 点击元素('name', 'loginsubmit')
+2023-06-21 20:14:04,748 base_page.py _sleep INFO sleep 3 s

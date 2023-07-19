@@ -1,0 +1,9 @@
+2023-06-26 13:27:44,236 logger.py info INFO 正在打开url: http://127.0.0.1:82/mgr/sign.html
+2023-06-26 13:27:44,315 logger.py info INFO 正在向('id', 'username')中输入"byhy"
+2023-06-26 13:27:44,469 logger.py info INFO 正在向('id', 'password')中输入"88888888"
+2023-06-26 13:27:44,570 logger.py info INFO 点击元素('xpath', '//button[text()="登录"]')
+2023-06-26 13:36:28,018 logger.py info INFO 正在打开url: http://127.0.0.1:82/mgr/sign.html
+2023-06-26 13:36:28,116 logger.py info INFO 正在向('id', 'username')中输入"byhy"
+2023-06-26 13:36:28,207 logger.py info INFO 正在向('id', 'password')中输入"88888888"
+2023-06-26 13:36:28,309 logger.py info INFO 点击元素('xpath', '//button[text()="登录"]')
+2023-06-26 13:36:28,500 logger.py info INFO 退出浏览器

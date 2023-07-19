@@ -1,0 +1,18 @@
+userinfo:
+  -
+    username: byhy
+    password: 88888888
+
+add_order:
+  -
+    order_name: 南京鼓楼-青霉素单
+    customer_name: 南京鼓楼医院
+    medicine:
+      青霉素: 6
+      来适可: 2
+      环丙沙星: 5
+  -
+    order_name: 南京鼓楼-不定单
+    customer_name: 南京鼓楼医院
+    medicine:
+      青霉素:

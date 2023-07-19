@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>UITest Report</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 80%; }
+table       { font-size: 100%; }
+
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+
+/*level 调整增加只显示通过用例的分类 --Findyou
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">UITest Report</h1>
+<p class='attribute'><strong>测试人员 : </strong> 最棒QA</p>
+<p class='attribute'><strong>开始时间 : </strong> 2023-06-26 12:02:43</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:15.267989</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 1，错误 1，通过率= 0.00%</p>
+
+<p class='description'>There is description.</p>
+</div>
+
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 0.00% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 0 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 1 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='errorClass warning'>
+    <td>test_cases.test51_cases.test_case01.TestCase01</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center">1</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',1)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='ft1_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_01_login_1___知鱼____cxy123_____</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse in">
+    <pre>
+    
+ft1_1: 2023-06-26 12:02:45,716 base_page.py _open INFO 正在打开url: http://bbs.51testing.com/member.php?mod=logging&amp;action=login
+log remove:None
+2023-06-26 12:02:50,920 base_page.py _input INFO 正在向('name', 'username1')中输入"知鱼"
+log remove:None
+log remove:None
+2023-06-26 12:02:56,464 base_page.py _save_img INFO 已截图:../report/screenshot/0626120256-Message: 元素获取失败
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x01028893+48451]
+	(No symbol) [0x00FBB8A1]
+	(No symbol) [0x00EC5058]
+	(No symbol) [0x00EF0467]
+	(No symbol) [0x00EF069B]
+	(No symbol) [0x00F1DD92]
+	(No symbol) [0x00F0A304]
+	(No symbol) [0x00F1C482]
+	(No symbol) [0x00F0A0B6]
+	(No symbol) [0x00EE7E08]
+	(No symbol) [0x00EE8F2D]
+	GetHandleVerifier [0x01288E3A+2540266]
+	GetHandleVerifier [0x012C8959+2801161]
+	GetHandleVerifier [0x012C295C+2776588]
+	GetHandleVerifier [0x010B2280+612144]
+	(No symbol) [0x00FC4F6C]
+	(No symbol) [0x00FC11D8]
+	(No symbol) [0x00FC12BB]
+	(No symbol) [0x00FB4857]
+	BaseThreadInitThunk [0x761C7D59+25]
+	RtlInitializeExceptionChain [0x7735B74B+107]
+	RtlClearBits [0x7735B6CF+191]
+.png
+2023-06-26 12:02:56,464 base_page.py _save_img INFO 已截图:../report/screenshot/0626120256-Message: 元素获取失败
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x01028893+48451]
+	(No symbol) [0x00FBB8A1]
+	(No symbol) [0x00EC5058]
+	(No symbol) [0x00EF0467]
+	(No symbol) [0x00EF069B]
+	(No symbol) [0x00F1DD92]
+	(No symbol) [0x00F0A304]
+	(No symbol) [0x00F1C482]
+	(No symbol) [0x00F0A0B6]
+	(No symbol) [0x00EE7E08]
+	(No symbol) [0x00EE8F2D]
+	GetHandleVerifier [0x01288E3A+2540266]
+	GetHandleVerifier [0x012C8959+2801161]
+	GetHandleVerifier [0x012C295C+2776588]
+	GetHandleVerifier [0x010B2280+612144]
+	(No symbol) [0x00FC4F6C]
+	(No symbol) [0x00FC11D8]
+	(No symbol) [0x00FC12BB]
+	(No symbol) [0x00FB4857]
+	BaseThreadInitThunk [0x761C7D59+25]
+	RtlInitializeExceptionChain [0x7735B74B+107]
+	RtlClearBits [0x7735B6CF+191]
+.png
+log remove:None
+log remove:None
+2023-06-26 12:02:56,658 set_log.py log_driver_info INFO 环境信息：
+2023-06-26 12:02:56,658 set_log.py log_driver_info INFO 环境信息：
+Traceback (most recent call last):
+  File "E:\Study\python\repos\sherry_pom\base\base_page.py", line 30, in _find
+    element = WebDriverWait(self.driver, t, ts).until(lambda e: self.driver.find_element(*el),
+  File "C:\Users\sherry\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 90, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 元素获取失败
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x01028893+48451]
+	(No symbol) [0x00FBB8A1]
+	(No symbol) [0x00EC5058]
+	(No symbol) [0x00EF0467]
+	(No symbol) [0x00EF069B]
+	(No symbol) [0x00F1DD92]
+	(No symbol) [0x00F0A304]
+	(No symbol) [0x00F1C482]
+	(No symbol) [0x00F0A0B6]
+	(No symbol) [0x00EE7E08]
+	(No symbol) [0x00EE8F2D]
+	GetHandleVerifier [0x01288E3A+2540266]
+	GetHandleVerifier [0x012C8959+2801161]
+	GetHandleVerifier [0x012C295C+2776588]
+	GetHandleVerifier [0x010B2280+612144]
+	(No symbol) [0x00FC4F6C]
+	(No symbol) [0x00FC11D8]
+	(No symbol) [0x00FC12BB]
+	(No symbol) [0x00FB4857]
+	BaseThreadInitThunk [0x761C7D59+25]
+	RtlInitializeExceptionChain [0x7735B74B+107]
+	RtlClearBits [0x7735B6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Study\python\repos\sherry_pom\base\base_page.py", line 35, in _find
+    set_log(f'{el}元素查找失败，已截图至：{img_name}')
+  File "E:\Study\python\repos\sherry_pom\common\set_log.py", line 41, in set_log
+    log_driver_info(_log, driver)
+  File "E:\Study\python\repos\sherry_pom\common\set_log.py", line 51, in log_driver_info
+    logger.info('Platform Name: ' + driver.capabilities['platformName'])
+AttributeError: 'str' object has no attribute 'capabilities'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\python\lib\site-packages\ddt.py", line 220, in wrapper
+    return func(self, *args, **kwargs)
+  File "E:\Study\python\repos\sherry_pom\test_cases\test51_cases\test_case01.py", line 32, in test_01_login
+    result = self.lp.login(user, pwd)
+  File "E:\Study\python\repos\sherry_pom\po\test51_po\login_page.py", line 17, in login
+    self._input(self.username, txt=_username)
+  File "E:\Study\python\repos\sherry_pom\base\base_page.py", line 50, in _input
+    element = self._find(el)
+  File "E:\Study\python\repos\sherry_pom\base\base_page.py", line 37, in _find
+    return element
+UnboundLocalError: local variable 'element' referenced before assignment
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>通过率：0.00%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+
+</body>
+</html>

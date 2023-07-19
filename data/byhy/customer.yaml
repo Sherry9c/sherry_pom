@@ -1,0 +1,36 @@
+userinfo:
+  -
+    username: byhy
+    password: 88888888
+
+search:
+  - 深圳市
+  - 武汉
+
+add:
+  -
+    customer_info:
+      name: 深圳市人民医院
+      phonenum: 12345678
+      address: 人民路2号
+    expected:
+      flag: 1
+      pop-up: False
+
+add-illegal:
+  -
+    customer_info:
+      name: 医
+      phonenum: 12345678
+      address: 人民路2号
+    expected:
+      flag: 0
+      pop-up: 字符
+  -
+    customer_info:
+      name: 医院
+      phonenum: 1234
+      address: 人民路2号
+    expected:
+      flag: 0
+      pop-up: 字符
